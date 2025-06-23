@@ -1,11 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Marks</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <p>Lab evalution1</p>
-    <p>Lab evalution3</p>
+
+  <h2>Student List</h2>
+  <table id="studentTable">
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>Sakib</td>
+      <td>71024</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Rubib</td>
+      <td>2316</td>
+      <td>72</td>
+    </tr>
+  </table>
+
+  <h3>Add Student</h3>
+  <input type="text" id="name" placeholder="Name">
+  <input type="text" id="id" placeholder="ID">
+  <input type="number" id="marks" placeholder="Marks">
+  <button onclick="addStudent()">Add</button>
+
+  <h3>Modify Marks</h3>
+  <input type="text" id="modifyId" placeholder="Enter ID to Modify">
+  <button onclick="openPopup()">Modify</button>
+
+  <!-- Popup -->
+  <div id="overlay"></div>
+  <div class="popup" id="popup">
+    <input type="number" id="newMarks" placeholder="New Marks">
+    <button onclick="updateMarks()">Update</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
